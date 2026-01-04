@@ -6,7 +6,7 @@
   <parent>
     <groupId>org.jenkins-ci.plugins</groupId>
     <artifactId>plugin</artifactId>
-    <version>4.54</version>
+    <version>5.2102.v5f5fe09fccf1</version>
     <relativePath />
   </parent>
 
@@ -16,13 +16,13 @@
 
   <properties>
     <!-- Baseline Jenkins version you use to build the plugin. Users must have this version or newer to run. -->
-    <jenkins.version>2.387.1</jenkins.version>
-    <java.level>11</java.level>
-    <github-branch-source.version>1701.v00cc8184df93</github-branch-source.version>
+    <jenkins.version>2.539</jenkins.version>
+    <java.level>17</java.level>
+    <github-branch-source.version>1925.v62fb_7ffb_08ce</github-branch-source.version>
   </properties>
 
   <name>Github additional traits plugin</name>
-  <description>Additional traits for Github branches and PRs based on labels and names</description>
+  <description>Additional traits for GitHub branches and PRs based on labels and names</description>
   <url>https://wiki.jenkins-ci.org/display/JENKINS/Github+additional+traits+plugin</url>
 
   <!-- The default licence for Jenkins OSS Plugins is MIT. Substitute for the applicable one if needed. -->
@@ -43,8 +43,8 @@
   </developers>
   
   <scm>
-    <connection>scm:git:git://github.com/jenkinsci/${project.artifactId}-plugin.git</connection>
-    <developerConnection>scm:git:git@github.com:jenkinsci/${project.artifactId}-plugin.git</developerConnection>
+    <connection>scm:git:https://github.com/jenkinsci/${project.artifactId}-plugin.git</connection>
+    <developerConnection>scm:git:https://github.com/jenkinsci/${project.artifactId}-plugin.git</developerConnection>
     <url>https://github.com/jenkinsci/${project.artifactId}-plugin</url>
   </scm>
 
@@ -65,10 +65,85 @@
     <dependencies>
       <dependency>
         <groupId>io.jenkins.tools.bom</groupId>
-        <artifactId>bom-2.387.x</artifactId>
-        <version>1887.vda_d0ddb_c15c4</version>
+        <artifactId>bom-2.479.x</artifactId>
+        <version>4228.v0a_71308d905b_</version>
         <scope>import</scope>
         <type>pom</type>
+      </dependency>
+      <dependency>
+        <groupId>io.jenkins.plugins</groupId>
+        <artifactId>caffeine-api</artifactId>
+        <version>3.2.2-178.v353b_8428ed56</version>
+      </dependency>
+      <dependency>
+        <groupId>org.jenkins-ci.plugins.workflow</groupId>
+        <artifactId>workflow-support</artifactId>
+        <version>991.v66c18437d509</version>
+      </dependency>
+      <dependency>
+        <groupId>io.jenkins.plugins</groupId>
+        <artifactId>ionicons-api</artifactId>
+        <version>94.vcc3065403257</version>
+      </dependency>
+      <dependency>
+        <groupId>org.jenkins-ci.plugins</groupId>
+        <artifactId>credentials</artifactId>
+        <version>1447.v4cb_b_539b_5321</version>
+      </dependency>
+      <dependency>
+        <groupId>org.jenkins-ci.plugins</groupId>
+        <artifactId>script-security</artifactId>
+        <version>1378.vf25626395f49</version>
+      </dependency>
+      <dependency>
+        <groupId>org.jenkins-ci.plugins.workflow</groupId>
+        <artifactId>workflow-api</artifactId>
+        <version>1384.vdc05a_48f535f</version>
+      </dependency>
+      <dependency>
+        <groupId>org.jenkins-ci.plugins.workflow</groupId>
+        <artifactId>workflow-step-api</artifactId>
+        <version>706.v518c5dcb_24c0</version>
+      </dependency>
+      <dependency>
+        <groupId>org.jenkins-ci.plugins</groupId>
+        <artifactId>scm-api</artifactId>
+        <version>707.v749f968369d4</version>
+      </dependency>
+      <dependency>
+        <groupId>org.jenkins-ci.plugins</groupId>
+        <artifactId>github-api</artifactId>
+        <version>1.330-492.v3941a_032db_2a_</version>
+      </dependency>
+      <dependency>
+        <groupId>com.coravy.hudson.plugins.github</groupId>
+        <artifactId>github</artifactId>
+        <version>1.45.0</version>
+      </dependency>
+      <dependency>
+        <groupId>io.jenkins.plugins</groupId>
+        <artifactId>commons-lang3-api</artifactId>
+        <version>3.19.0-104.v12125f33a_255</version>
+      </dependency>
+      <dependency>
+        <groupId>io.jenkins.plugins</groupId>
+        <artifactId>jjwt-api</artifactId>
+        <version>0.11.5-120.v0268cf544b_89</version>
+      </dependency>
+      <dependency>
+        <groupId>org.jenkins-ci.plugins</groupId>
+        <artifactId>jackson2-api</artifactId>
+        <version>2.18.3-402.v74c4eb_f122b_2</version>
+      </dependency>
+      <dependency>
+        <groupId>org.jenkins-ci.plugins</groupId>
+        <artifactId>plain-credentials</artifactId>
+        <version>195.vb_906e9073dee</version>
+      </dependency>
+      <dependency>
+        <groupId>org.jenkins-ci.modules</groupId>
+        <artifactId>instance-identity</artifactId>
+        <version>203.v15e81a_1b_7a_38</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
@@ -82,12 +157,7 @@
     <dependency>
       <groupId>io.jenkins.plugins</groupId>
       <artifactId>okhttp-api</artifactId>
-      <version>4.10.0-132.v7a_7b_91cef39c</version>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.commons</groupId>
-      <artifactId>commons-lang3</artifactId>
-      <version>3.12.0</version>
+      <version>4.12.0-195.vc02552c04ffd</version>
     </dependency>
   </dependencies>
 
